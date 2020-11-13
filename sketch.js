@@ -18,7 +18,10 @@ function draw() {
   drawSprites();
 }
 function spawnTiles(){
-	var tiles=createSprite(50,30)
+  
+  var tiles=createSprite(50,0,40,50)
+  tiles.velocityY=2
+
 }
 
 
