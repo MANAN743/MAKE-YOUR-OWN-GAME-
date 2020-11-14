@@ -1,7 +1,8 @@
 var TileGroup;
+var score=0
 function preload()
 {
-	
+	backgroundIMG=loadImage("background.png")
 }
 
 function setup() {
@@ -12,20 +13,31 @@ function setup() {
 
 
 function draw() {
-  background(0);
+  background(backgroundIMG);
   for(var i=0;i<TileGroup.length;i++){
     if(mousePressedOver(TileGroup.get(0))){
       TileGroup.get(0).destroy();
+      score++
     }
   }
   for(var i=0;i<TileGroup.length;i++){
 if(TileGroup.get(0).y>displayHeight){
+  textSize(40)
+  fill("red")
+  strokeWeight(2);
+stroke(15);
   text("GameOver",width/2,height/2)
 }
   }
+  textSize(30)
+  fill("white")
+  strokeWeight(2);
+stroke(15);
+  text("Score: "+score,20,20)
   
   spawnTiles()
   drawSprites();
+  
 }
 function spawnTiles(){
   if (frameCount%40===0){
