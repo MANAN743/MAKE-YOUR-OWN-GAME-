@@ -22,6 +22,7 @@ stroke(15);
   text("Score: "+score,20,20)
   if(gameState==="Play"){
   for(var i=0;i<TileGroup.length;i++){
+
     if(mousePressedOver(TileGroup.get(0))){
       TileGroup.get(0).destroy();
       score++
@@ -39,9 +40,10 @@ if(TileGroup.get(0).y>displayHeight){
   
   
   spawnTiles()
+ 
 }
 if(gameState==="End"){
-  textSize(40)
+  textSize(70)
   fill("red")
   strokeWeight(2);
 stroke(15);
@@ -49,13 +51,13 @@ stroke(15);
   NaachMeriRanisound.pause();
 }
   drawSprites();
-
 }
 function spawnTiles(){
   if (frameCount%40===0){
   var tiles=createSprite(50,0,100,150)
   tiles.velocityY=4+frameCount/100
   var num=Math.round(random(1,3))
+  tiles.shapeColor="black";
   switch(num){
     case 1:tiles.x=width/4;
     break;
