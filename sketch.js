@@ -48,7 +48,7 @@ if(gameState==="End"){
   strokeWeight(2);
 stroke(15);
   text("GameOver",width/2,height/2)
-  NaachMeriRanisound.pause();
+  //NaachMeriRanisound.pause();
 }
   drawSprites();
 }
