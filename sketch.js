@@ -5,7 +5,7 @@ var gameState="Play"
 function preload()
 {
   backgroundIMG=loadImage("background.png")
- NaachMeriRanisound=loadSound("Naach Meri Rani Song - Guru Randhawa 128 Kbps.mp3")
+ NaachMeriRanisound=loadSound("test.mp3")
 }
 function setup() {
 	createCanvas(windowWidth/2,windowHeight);
